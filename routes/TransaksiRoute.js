@@ -6,6 +6,7 @@ import{
   saveTransaksi,
   updatetTransaksi,
   deleteTransaksi,
+  getTransaksiWithKamera
 } from '../controllers/TransaksiController.js'
 
 
@@ -17,6 +18,7 @@ router.get('/transaksi/:id',getTransaksiById);
 router.post('/transaksi',saveTransaksi);
 router.patch('/transaksi/:id',updatetTransaksi);
 router.delete('/transaksi/:id',deleteTransaksi);
+router.get('/transaksi-kamera',getTransaksiWithKamera);
 
 
 export default router;

@@ -7,7 +7,7 @@ import MerkRoute from './routes/MerkRoute.js';
 import TransaksiRoute from './routes/TransaksiRoute.js';
 import AuthRoute from './routes/AuthRoute.js';
 import UserRoute from './routes/UserRoute.js';
-
+import { Transaksi, Kamera } from "./models/Associations.js";
 const app = express();
 
 app.listen();
@@ -30,6 +30,14 @@ app.use(TransaksiRoute);
 app.use(AuthRoute);
 app.use(UserRoute);
 
+(async () => {
+  try {
+    await db.sync(); // Sinkronisasi database
+    console.log("Database terhubung dan diperbarui! dan telah menambhakan relasi");
+  } catch (error) {
+    console.error("Error saat sinkronisasi database:", error);
+  }
+})();
 
 app.listen(5000,()=>console.log("Server Running"));
 

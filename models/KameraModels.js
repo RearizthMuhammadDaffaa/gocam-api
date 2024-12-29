@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
 
 import db from '../config/Database.js';
+import Transaksi from "./Transaksi.js";
 
 const {DataTypes} = Sequelize;
 
@@ -23,8 +24,10 @@ const Kamera = db.define('kamera',{
 
 
 
+
+
 export default Kamera;
 
-(async()=>{
-  await db.sync();
-})();
+// (async()=>{
+//   await db.sync();
+// })();
