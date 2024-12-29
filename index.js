@@ -16,7 +16,8 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://gocam.vercel.app'
+    'https://gocam.vercel.app',
+    'https://gocam-admin.vercel.app'
   ],  // Sesuaikan dengan URL React app
   credentials: true  // Izinkan cookie untuk dikirim
 }));
